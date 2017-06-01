@@ -9,6 +9,9 @@
 .link:hover {
     color:#2b6dad;
 }
+.meta-link{
+    color: #aaa;
+}
 
 .bigcrow {
     
@@ -88,11 +91,21 @@
     box-shadow: none;
     height: 155px;
 }
+.footer ul{
+    list-style-type: none;
+}
 /*END OF footer*/
 
 /*start of globals*/
 a {
     color: #0a0a0a;
+}
+
+::selection {
+  background: #b3ff70; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #b3ff70; /* Gecko Browsers */
 }
 
 .m-t-5 {
