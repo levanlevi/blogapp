@@ -1,0 +1,184 @@
+*{
+    font-family: Rioni Arial, sans-serif;
+}
+
+.link {
+    color:#2b6dad;
+}
+
+.link:hover {
+    color:#2b6dad;
+}
+
+.bigcrow {
+    
+}
+
+.head-nav {
+    padding: 0;
+    background: #0a0a0a;
+    border-top: none;
+    box-shadow: none;
+    height: 55px;
+}
+
+.nav-side{
+    list-style-type: none;
+}
+.nav-side li a{
+    text-decoration: none;
+    color:black;
+}
+.nav-side li a:hover{
+    color:white;
+    background-color: black;
+}
+
+
+@font-face {
+    font-family: "Rioni Arial";
+    src: url('../assets/fonts/bpg_rioni_arial.otf') format("truetype");
+}
+
+/* start of posts */
+.single-post {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 30px;
+}
+.single-post:last-child{
+    border: none;
+}
+.posts {
+    list-style-type: none;
+}
+.post-head {
+    text-align: center;
+}
+.post-title {
+    font-size: 23px;
+    font-weight: bold;
+}
+.post-author-link:after {
+    content: "";
+    height: 2px;
+    background: #0a0a0a;
+    display: block;
+    bottom: -23px;
+    position: absolute;
+    width: 220px;
+    left: 50%;
+    margin-left: -110px;
+}
+
+.post-footer .stats {
+    padding-left: 0px;
+    font-size: 13px;
+    line-height: 24px;
+}
+.post-footer .stats > * {
+    color: #aaa;
+}
+/* end of posts */
+/*START OF footer*/
+.footer {
+    padding: 0;
+    background: #0a0a0a;
+    border-top: none;
+    box-shadow: none;
+    height: 155px;
+}
+/*END OF footer*/
+
+/*start of globals*/
+a {
+    color: #0a0a0a;
+}
+
+.m-t-5 {
+    margin-top: 5px;
+}
+.m-t-20 {
+    margin-top: 20px;
+}
+.m-t-25 {
+    margin-top: 25px;
+}
+
+.m-t-30 {
+    margin-top: 30px;
+}
+
+.m-t-35 {
+    margin-top: 35px;
+}
+
+.m-b-5 {
+    margin-bottom: 5px;
+}
+.m-b-20 {
+    margin-bottom: 20px;
+}
+.m-b-25 {
+    margin-bottom: 25px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
+}
+
+.m-b-35 {
+    margin-bottom: 35px;
+}
+/*end of globals*/
+
+/* START OF social media icons plugin styles
+source: https://codepen.io/vpdemo/pen/zxRYdw*/
+@import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+.socialbtns a,
+.socialbtns a:hover {
+	text-decoration: none;
+	padding: 5px;
+}
+
+.socialbtnsbtnsbtns, .socialbtnsbtnsbtns ul, .socialbtnsbtnsbtns li {
+	margin: 0;
+	padding: 5px;
+}
+
+.socialbtnsbtnsbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns li {
+    list-style: none outside none;
+    display: inline-block;
+}
+
+.socialbtns .fa {
+	color: #FFF;
+	text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+	-webkit-text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+	-moz-text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+	-o-text-shadow: 1px 1px 0px #000,
+			1px -1px 0px #000,
+			-1px 1px 0px #000,
+			-1px -1px 0px #000;
+}
+
+.socialbtns .fa:hover {
+    background-color: #aaa;
+    border-radius: 2px;
+}
+/* END OF social media icons plugin styles*/
