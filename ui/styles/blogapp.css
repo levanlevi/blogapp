@@ -49,9 +49,7 @@
     border-bottom: 1px solid #e2e2e2;
     padding-bottom: 30px;
 }
-.single-post:last-child{
-    border: none;
-}
+
 .posts {
     list-style-type: none;
 }
@@ -61,17 +59,6 @@
 .post-title {
     font-size: 23px;
     font-weight: bold;
-}
-.post-author-link:after {
-    content: "";
-    height: 2px;
-    background: #0a0a0a;
-    display: block;
-    bottom: -23px;
-    position: absolute;
-    width: 220px;
-    left: 50%;
-    margin-left: -110px;
 }
 
 .post-footer .stats {
@@ -110,6 +97,12 @@ a {
 
 .m-t-5 {
     margin-top: 5px;
+}
+.m-t-10 {
+    margin-top: 20px;
+}
+.m-t-15 {
+    margin-top: 20px;
 }
 .m-t-20 {
     margin-top: 20px;
