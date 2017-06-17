@@ -4,7 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component';
-import { BlogpostComponent } from './blogpost/blogpost.component';
+import { PostListComponent } from './post/list/post-list.component';
+import { SinglePostComponent } from './post/single/single-post.component';
 
 @NgModule({
   imports: [
@@ -12,14 +13,16 @@ import { BlogpostComponent } from './blogpost/blogpost.component';
     FormsModule,
     HttpModule,
     RouterModule.forRoot([
-      { path: 'home', component: BlogpostComponent },
+      { path: 'home', component: PostListComponent },
+      { path: 'post/:id', component: SinglePostComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home', pathMatch: 'full' }
     ]),
   ],
   declarations: [
     AppComponent,
-    BlogpostComponent
+    PostListComponent,
+    SinglePostComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

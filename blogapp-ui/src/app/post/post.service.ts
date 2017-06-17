@@ -1,7 +1,25 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class BlogpostService {
+export class PostService {
+
+    public getById(id: any) {
+        let post = {
+            title: "title",
+            body: "ყურადღება არის თანამედროვე ეკონომიკაში ყველაზე მყარი ვალუტა. ნებისმიერი ეკონომიკური ტრანზაქცია იწყება ყურადღებით. უფრო",
+            date: new Date(),
+            author: "Some one",
+            categories: [
+                {
+                    name: "self-help",
+                    id: "12312i43ur8934naegaqeqeqrh"
+                }
+            ]
+        };
+
+        return post;
+    }
+
     public get(): any[] {
         let posts = [
             {
