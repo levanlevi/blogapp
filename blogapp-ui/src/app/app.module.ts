@@ -9,8 +9,10 @@ import { LoginComponent } from './security/login/login.component';
 import { PostListComponent } from './post/list/post-list.component';
 import { SinglePostComponent } from './post/single/single-post.component';
 import { AuthGuard } from './security/auth.guard';
-import { PostCreateComponent } from './admin/post/post-create.component';
-import { DashboardComponent } from './admin/container/dashboard.component';
+import { PostCreateComponent } from './admin/post/create/post-create.component';
+import { AdminContainerComponent } from './admin/container/admin-container.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AdminPostListComponent } from './admin/post/list/post-list.component';
 
 @NgModule({
   imports: [
@@ -30,10 +32,13 @@ import { DashboardComponent } from './admin/container/dashboard.component';
       { path: 'login', component: LoginComponent },
       {
         path: 'admin',
-        component: DashboardComponent,
+        component: AdminContainerComponent,
         canActivate: [AuthGuard],
         children: [
-          { path: 'create', component: PostCreateComponent }
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+          { path: 'dashboard', component: DashboardComponent },
+          { path: 'posts', component: AdminPostListComponent },
+          { path: 'post/create', component: PostCreateComponent }
         ]
       },
       { path: '**', redirectTo: '', pathMatch: 'full' }
@@ -46,7 +51,9 @@ import { DashboardComponent } from './admin/container/dashboard.component';
     SinglePostComponent,
     LoginComponent,
     PostCreateComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminContainerComponent,
+    AdminPostListComponent
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

@@ -1,0 +1,92 @@
+<div class="row">
+  <div class="col-md-12 bigcrow">
+    <!--start of header panel-->
+    <div class="row">
+      <div class="col-md-12 head-nav">
+        <div class="col-md-1"></div>
+        <div class="col-md-3 logo">
+          <a [routerLink]="['/home']">
+              <img class="m-t-5" src='/assets/images/logo.png' style="height:45px;margin-left:40px;" />
+            </a>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-3 m-t-10 user-menu">
+          <a href='#' class="meta-link">გამოაქვეყნე სტატია</a>
+        </div>
+      </div>
+    </div>
+    <!--end of header panel-->
+
+    <!--start of site announcement-->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="m-t-5" style="text-align:center; padding:5px;">
+          <p>
+            <!--<a class="link" href='#'>მიიღე მონაწილეობა სონი ერისიონის სტატიის კონკურსში და მოიგე ფულადი პრიზი ...</a>-->
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--end of site announcement-->
+    <!--start of content panel-->
+    <div class="row m-t-35">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <!--start of side bar menu-->
+          <div class="col-md-3">
+            <ul class="nav-side">
+              <li><a [routerLink]="['/admin/dashboard']">მთავარი</a></li>
+              <li><a [routerLink]="['/admin/post/create']">ახალი სტატია</a></li>
+              <li><a [routerLink]="['/admin/posts']">სტატიები</a></li>
+            </ul>
+          </div>
+          <!--end of side bar menu-->
+
+          <!--start of site posts body-->
+          <router-outlet></router-outlet>
+          <!--<posts></posts>-->
+          <!--END OF site posts body-->
+
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <!--end of content panel-->
+
+    <!--START OF footer panel-->
+    <div class="row">
+      <div class="col-md-12 footer">
+        <div class="col-md-4" style="text-align:right;">
+          <ul class="m-t-20">
+            <li>
+              <a class="meta-link" href="#">პროექტის შესახებ</a>
+            </li>
+            <li>
+              <a class="meta-link" href="#">წესები</a>
+            </li>
+            <li><a class="meta-link" href="#">დარეგისტრირდი</a></li>
+            <li><a class="meta-link" href="#">შემდეგი რა იქნება</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4" style="text-align:center;">
+          <img src='/assets/images/logo.png' style="height:45px;margin-top: 35px;" />
+        </div>
+        <div class="col-md-4">
+          <ul class="m-t-20">
+            <li>
+              <a class="meta-link" href="#">ეს არ უნდა ნახო</a>
+            </li>
+            <li>
+              <a class="meta-link" href="#">მოითხოვე სტატია</a>
+            </li>
+            <li><a class="meta-link" href="#">vlog-ი</a></li>
+            <li><a class="meta-link" href="#">ახალ პროექტს იწყებენ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--END OF footer panel-->
+  </div>
+</div>
