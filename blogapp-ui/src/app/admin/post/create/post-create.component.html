@@ -1,1 +1,16 @@
-<h1>Hello from Post CREATE</h1>
+<div class="col-md-6">
+    <h4>ახალი პოსტი:</h4>
+    <form name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+        <div class="form-group">
+            <label for="title">სათაური</label>
+            <input type="text" class="form-control" name="title" [(ngModel)]="model.title" #title="ngModel" />
+        </div>
+        <div class="form-group">
+            <label for="body">ტექსტი</label>
+            <textarea type="text" style="min-height: 90px;" class="form-control" name="body" [(ngModel)]="model.body" #body="ngModel"></textarea>
+        </div>
+        <div class="form-group">
+            <a (click)="save()" class="btn btn-primary">შენახვა</a>
+        </div>
+    </form>
+</div>
