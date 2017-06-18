@@ -25,12 +25,14 @@ export class LoginComponent {
 
   login() {
     this.loading = true;
-    this.authService.login(this.model.username, this.model.password)
-      .subscribe(data => {
-        this.router.navigate([this.returnUrl]);
-      },
-      error => {// TODO Show error
-        this.loading = false;
-      });
+    localStorage.setItem('currentUser', "token");
+    this.router.navigate([this.returnUrl]);
+    // this.authService.login(this.model.username, this.model.password)
+    //   .subscribe(data => {
+    //     this.router.navigate([this.returnUrl]);
+    //   },
+    //   error => {// TODO Show error
+    //     this.loading = false;
+    //   });
   }
 }

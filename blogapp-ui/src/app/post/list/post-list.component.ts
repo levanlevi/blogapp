@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { PostService } from './../post.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'posts',
-  templateUrl: './post-list.component.html',
+  templateUrl: 'post-list.component.html',
   providers: [PostService]
 })
 export class PostListComponent implements OnInit {
@@ -12,7 +13,7 @@ export class PostListComponent implements OnInit {
   constructor(private dataService: PostService) { }
 
   ngOnInit() {
-    this.posts = this.getPosts();    
+    this.posts = this.getPosts();
   }
 
   private getPosts(): any[] {
