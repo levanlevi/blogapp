@@ -17,7 +17,7 @@ export class AdminPostListComponent implements OnInit {
     }
 
     getPosts() {
-        this.items = this.dataService.get();
-        console.log('items: ' + this.items);
+        this.dataService.getList()
+            .subscribe(data => this.items = data);
     }
 }

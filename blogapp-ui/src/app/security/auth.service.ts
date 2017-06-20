@@ -1,15 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map'
+import { BaseService } from './../shared/base-http.service';
+import 'rxjs/add/operator/map';
 
 @Injectable()
-export class AuthService {
+export class AuthService extends BaseService {
 
-    constructor(private http: Http) { }
+    constructor(protected http: Http) {
+        super(http);
+    }
 
     login(username: string, password: string) {
-        return this.http.post('/api/authenticate', JSON.stringify({ username: username, password: password }))
+        return this.http.post(this.hostAPI + '/authenticate'
+            , JSON.stringify({ name: username, password: password })
+            , this.options())
             .map((response: Response) => {
                 // login successful if there's a token in the response
                 let user = response.json();

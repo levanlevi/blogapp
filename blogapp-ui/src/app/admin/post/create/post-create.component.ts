@@ -15,8 +15,7 @@ export class PostCreateComponent implements OnInit {
     }
 
     save() {
-        console.log(this.model);
-        this.model = this.dataService.save(this.model);
-        console.log(this.model);
+        this.dataService.save(this.model)
+            .subscribe(data => console.log(data));
     }
 }

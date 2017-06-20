@@ -5,15 +5,12 @@
         <div class="col-md-12 single-post">
           <div class="col-md-12 post-head">
             <div class="col-md-12 post-title m-b-10">
-              <a [routerLink]="['/post', post.title]">{{ post.title }}</a>
+              <a [routerLink]="['/post', post._id]">{{ post.title }}</a>
             </div>
             <div class="col-md-12 post-author">
-              <!--<a class="post-author-link" href='javascript:void(0)'>{{ post.author }}</a>-->
-              <!--<br/>-->
               <a href='#'>{{ post.date | date }}</a>
             </div>
           </div>
-
           <div class="col-md-12 post-body m-t-15">
             {{ post.body }}
           </div>

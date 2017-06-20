@@ -5,7 +5,7 @@ var routes = function (app) {
     var secureRouter = express.Router();
     var User = require('./../models/userModel'); 
     // route to authenticate a user (POST http://localhost:8080/api/authenticate)
-    app.post('/authenticate', function (req, res) {
+    app.post('/api/authenticate', function (req, res) {
         // find the user
         User.findOne({
             name: req.body.name

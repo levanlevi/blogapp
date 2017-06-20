@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
     providers: [PostService]
 })
 export class SinglePostComponent implements OnInit {
-    post: any[];
+    post: any;
     private sub: Subscription;
 
     constructor(private dataService: PostService,
@@ -17,18 +17,19 @@ export class SinglePostComponent implements OnInit {
         private router: Router) { }
 
     ngOnInit() {
-        console.log('single');
         this.sub = this.route.params.subscribe(
             params => {
                 let id = params['id'];
-
-                //if (!id) //this.router.navigate['/home'];
+                if (!id) {
+                    this.router.navigate['/posts'];
+                }
 
                 this.post = this.getPost(id);
             });
     }
 
     private getPost(id: any): any {
-        return this.dataService.getById(id);
+        return this.dataService.getById(id)
+            .subscribe(data => this.post = data);
     }
 }
