@@ -10,47 +10,48 @@ var routes = function (Blogpost) {
         .get(blogpostController.get);
 
     blogpostRouter.use('/:blogpostId', function (req, res, next) {
-        Book.findById(req.params.blogpostId, function (err, book) {
+        Blogpost.findById(req.params.blogpostId, function (err, blogpost) {
             if (err)
                 res.status(500).send(err);
-            else if (book) {
-                req.book = book;
+            else if (blogpost) {
+                req.blogpost = blogpost;
                 next();
             }
             else
-                res.status(404).send('no book found');
+                res.status(404).send('no blogpost found');
         });
     });
-    
+
     blogpostRouter.route('/:blogpostId')
         .get(function (req, res) {
-            res.send(req.book);
+            res.send(req.blogpost);
         })
-        .put(function (req, res) {
-            req.book.title = req.body.title;
-            req.book.author = req.body.author;
-            req.book.read = req.body.read;
-            req.book.genre = req.body.genre;
-            req.book.save();
-            res.json(req.book);
+        .put(function (req, res) { // replace with id
+            req.blogpost.title = req.body.title;
+            req.blogpost.body = req.body.body;
+            req.blogpost.author = req.body.author;
+            req.blogpost.date = req.body.date;
+            req.blogpost.categories = req.body.categories;
+            req.blogpost.save();
+            res.json(req.blogpost);
         })
-        .patch(function (req, res) {
+        .patch(function (req, res) { // update with id. maintains field value not included in request
             if (req.body._id)
                 delete req.body._id;
 
             for (var p in req.body) {
-                req.book[p] = req.body[p];
+                req.blogpost[p] = req.body[p];
             }
 
-            req.book.save(function (err) {
+            req.blogpost.save(function (err) {
                 if (err)
                     res.status(500).send(err);
                 else
-                    res.json(req.book);
+                    res.json(req.blogpost);
             })
         })
         .delete(function (req, res) {
-            req.book.remove(function (err) {
+            req.blogpost.remove(function (err) {
                 if (err)
                     res.status(500).send();
                 else

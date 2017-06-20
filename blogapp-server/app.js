@@ -33,7 +33,11 @@ var categoryRouter = require('./routes/categoryRoutes')(Category);
 var userRouter = require('./routes/userRoutes')(User);
 
 app.use('/api/users', secureRouter);
-//app.use('/api/posts', secureRouter);
+app.use('/api/categories', secureRouter);
+app.post('/api/posts', secureRouter);
+app.put('/api/posts/:blogpostId', secureRouter);
+app.patch('/api/posts/:blogpostId', secureRouter);
+app.delete('/api/posts/:blogpostId', secureRouter);
 
 app.use('/api/posts', blogpostRouter);
 app.use('/api/categories', categoryRouter);
