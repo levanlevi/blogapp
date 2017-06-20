@@ -21,6 +21,7 @@ var routes = function (Blogpost) {
                 res.status(404).send('no book found');
         });
     });
+    
     blogpostRouter.route('/:blogpostId')
         .get(function (req, res) {
             res.send(req.book);
