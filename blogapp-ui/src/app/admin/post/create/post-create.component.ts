@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { AdminPostService } from './../admin-post.service';
 
 @Component({
@@ -7,11 +7,17 @@ import { AdminPostService } from './../admin-post.service';
     templateUrl: 'post-create.component.html',
     providers: [AdminPostService]
 })
-export class PostCreateComponent implements OnInit {
+export class PostCreateComponent implements OnInit, AfterViewInit {
     model: any = {};
+
     constructor(private dataService: AdminPostService) { }
 
     ngOnInit() {
+
+    }
+
+    ngAfterViewInit() {
+        
     }
 
     save() {

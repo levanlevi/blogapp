@@ -24,7 +24,7 @@ var blogpostController = function (Blogpost) {
                 res.status(500).send(err);
             else
                 res.json(blogposts);
-        });
+        }).sort({ date: -1 });
     }
 
 
