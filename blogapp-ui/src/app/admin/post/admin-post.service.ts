@@ -24,4 +24,13 @@ export class AdminPostService extends BaseService {
         return this.post(this.hostAPI + '/posts/', newPost, this.authorisedOptions())
             .map(res => res.json());
     }
+
+    public update(id, postData: any): Observable<any> {
+        return this.patch(this.hostAPI + '/posts/' + id, postData, this.authorisedOptions())
+            .map(res => res.json());
+    }
+
+    public remove(id): Observable<any> {
+        return this.delete(this.hostAPI + '/posts/' + id, this.authorisedOptions());
+    }
 }

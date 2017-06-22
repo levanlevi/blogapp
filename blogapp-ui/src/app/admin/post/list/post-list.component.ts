@@ -20,4 +20,9 @@ export class AdminPostListComponent implements OnInit {
         this.dataService.getList()
             .subscribe(data => this.items = data);
     }
+
+    remove(id) {
+        this.dataService.remove(id)
+            .subscribe(data => this.getPosts());
+    }
 }

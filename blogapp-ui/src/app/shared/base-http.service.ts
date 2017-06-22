@@ -18,6 +18,14 @@ export class BaseService {
         return this.http.post(url, postData, options);
     }
 
+    protected patch(url, body, options) {
+        return this.http.patch(url, body, options);
+    }
+    
+    protected delete(url, options) {
+        return this.http.delete(url, options);
+    }
+
     protected options(): RequestOptions {
         let headers = new Headers({
             'Content-Type': 'application/json'

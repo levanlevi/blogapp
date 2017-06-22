@@ -22,7 +22,7 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
     BrowserModule,
     FormsModule,
     HttpModule,
-    FroalaEditorModule.forRoot(), 
+    FroalaEditorModule.forRoot(),
     FroalaViewModule.forRoot(),
     RouterModule.forRoot([
       {
@@ -43,7 +43,8 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           { path: 'dashboard', component: DashboardComponent },
           { path: 'posts', component: AdminPostListComponent },
-          { path: 'post/create', component: PostCreateComponent }
+          { path: 'post/create', component: PostCreateComponent },
+          { path: 'post/edit/:id', component: PostCreateComponent }
         ]
       },
       { path: '**', redirectTo: '', pathMatch: 'full' }
