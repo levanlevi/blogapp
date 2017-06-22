@@ -1,10 +1,11 @@
 <div class="row">
   <div class="col-md-12 bigcrow">
+
+
     <!--start of header panel-->
     <div class="row">
       <div class="col-md-12 head-nav">
-        <div class="col-md-1"></div>
-        <div class="col-md-3 logo">
+        <div class="col-md-3 logo col-md-offset-1">
           <a [routerLink]="['/home']">
               <img class="m-t-5" src='/assets/images/logo.png' style="height:45px;margin-left:40px;" />
             </a>
@@ -17,6 +18,8 @@
     </div>
     <!--end of header panel-->
 
+
+
     <!--start of site announcement-->
     <div class="row">
       <div class="col-md-12">
@@ -28,61 +31,30 @@
       </div>
     </div>
     <!--end of site announcement-->
+
+
+
     <!--start of content panel-->
     <div class="row m-t-35">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
+      <div class="col-md-10 col-md-offset-1">
         <div class="row">
-          <!--start of side bar menu-->
-          <div class="col-md-3">
-            <ul class="nav-side">
-              <li><a href='javascript:void(0)'>ტოპ სტატიები</a></li>
-              <li><a href='javascript:void(0)'>რა ხდება კარგი</a></li>
-              <li><a href='javascript:void(0)'>ხელოვნება & ფოტოგრაფია</a></li>
-              <li><a href='javascript:void(0)'>ბიზნესი და ფული</a></li>
-              <li><a href='javascript:void(0)'>თვით-დახმარება</a></li>
-              <li><a href='javascript:void(0)'>მოგზაურობა</a></li>
-              <li><a href='javascript:void(0)'>ჯანმრთელობა, ფიტნესი, კვება</a></li>
-              <li><a href='javascript:void(0)'>ტექნოლოგიები</a></li>
-              <li><a href='javascript:void(0)'>იუმორი</a></li>
-              <li><a href='javascript:void(0)'>ინტერვიუ</a></li>
-              <li><a href='javascript:void(0)'>კატეგორიები საინტერესოდ უნდა შევარჩიოთ</a></li>
-              <li>- - გამოწერილი - -
-              </li>
-              <li><a href='javascript:void(0)'>levia</a>
-              </li>
-              <li><a href='javascript:void(0)'>zara</a>
-              </li>
-            </ul>
-          </div>
-          <!--end of side bar menu-->
 
-          <!--start of site posts body-->
+          
+          <menu></menu>
+
+          
           <router-outlet></router-outlet>
-          <!--<posts></posts>-->
-          <!--END OF site posts body-->
 
-          <div class="col-md-2"></div>
+
         </div>
       </div>
-      <div class="col-md-1"></div>
     </div>
     <!--end of content panel-->
 
-    <!--START OF footer panel-->
-    <div class="row">
-      <div class="col-md-12 footer">
-        <div class="col-md-4" style="text-align:right;">
-        </div>
-        <div class="col-md-4" style="text-align:center;">
-          <img src='/assets/images/logo.png' style="height:45px;margin-top: 35px;" />
-        </div>
-        <div class="col-md-4">
-          <ul class="m-t-20">
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!--END OF footer panel-->
+
+
+    <footercmp></footercmp>
+
+
   </div>
 </div>

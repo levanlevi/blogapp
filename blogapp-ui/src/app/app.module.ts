@@ -13,12 +13,17 @@ import { PostCreateComponent } from './admin/post/create/post-create.component';
 import { AdminContainerComponent } from './admin/container/admin-container.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AdminPostListComponent } from './admin/post/list/post-list.component';
+import { MenuComponent } from './sitebars/side/menu.component';
+import { FooterComponent } from './sitebars/footer/footer.component';
+import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    FroalaEditorModule.forRoot(), 
+    FroalaViewModule.forRoot(),
     RouterModule.forRoot([
       {
         path: '',
@@ -53,7 +58,9 @@ import { AdminPostListComponent } from './admin/post/list/post-list.component';
     PostCreateComponent,
     DashboardComponent,
     AdminContainerComponent,
-    AdminPostListComponent
+    AdminPostListComponent,
+    MenuComponent,
+    FooterComponent
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

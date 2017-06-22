@@ -191,3 +191,6 @@ source: https://codepen.io/vpdemo/pen/zxRYdw*/
     border-radius: 2px;
 }
 /* END OF social media icons plugin styles*/
+.crt-pst-wysiwyg div.fr-wrapper{
+    min-height: 350px;
+}

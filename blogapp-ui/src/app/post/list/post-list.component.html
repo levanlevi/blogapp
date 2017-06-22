@@ -11,8 +11,8 @@
               <a href='#'>{{ post.date | date }}</a>
             </div>
           </div>
-          <div class="col-md-12 post-body m-t-15">
-            {{ post.body }}
+          <div class="col-md-12 post-body m-t-15" [innerHtml]="post.body">
+            <!-- post body is bound to innerHtml property -->
           </div>
         </div>
       </div>
